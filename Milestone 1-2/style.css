@@ -12,16 +12,21 @@ body {
     margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }
 
-/* Left Section Styling */
 .left-section {
-    background-color: #2c2c2c;
+    background-color: #000000;
     color: white;
     padding: 20px;
     width: 35%;
     text-align: center;
     border-right: 5px solid #e63946;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    flex-shrink: 0;
 }
 
 .profile-picture {
@@ -31,6 +36,11 @@ body {
     border-radius: 50%;
     border: 5px solid #e63946;
     margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; 
+    height: auto; 
 }
 
 h1 {
@@ -49,6 +59,7 @@ h3 {
     box-shadow: 0 0 15px #e63946;
     margin-top: 5%;
     margin-bottom: 5%;
+    word-wrap: break-word;
 }
 
 ul {
@@ -61,10 +72,13 @@ ul li {
     margin: 5px 0;
 }
 
-/* Right Section Styling */
 .right-section {
     padding: 20px;
     width: 65%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    flex-shrink: 0;
 }
 
 button {
@@ -79,4 +93,88 @@ button {
 button:hover {
     background-color: #ff737c;
 }
+
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .resume-container {
+        width: 100%;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .left-section {
+        width: 100%;
+        text-align: center;
+        border-right: none;
+        border-bottom: 5px solid #e63946;
+        flex-shrink: 1;
+    }
+
+    .right-section {
+        width: 100%;
+        flex-shrink: 1;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+        margin-top: 5%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 50px;
+    }
+
+    .resume-container {
+        width: 90%;
+    }
+
+    .left-section {
+        width: 40%;
+    }
+
+    .right-section {
+        width: 60%;
+    }
+
+    .profile-picture {
+        width: 130px;
+        height: 130px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    button {
+        font-size: 17px;
+    }
+}
+
+
+
+
 
